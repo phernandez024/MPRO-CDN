@@ -229,6 +229,9 @@
     <exec seq="on_boot" type="verbatim">
         echo "nameserver 8.8.8.8" >> /etc/resolv.conf
         ip route add 0.0.0.0/0 via 200.200.200.1
+        systemctl start apache2
+        sudo chmod 666 /var/www/html/imagen.jpg
+        sudo chmod 666 /var/www/html/imagen2.jpg
     </exec>
   </vm>
 
