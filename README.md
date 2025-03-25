@@ -5,5 +5,32 @@ El objetivo de este mini-proyecto es desarrollar un escenario de red de distribu
 ## Diseño del escenario
 ![Diagrama del Escenario](escenario_Red.drawio.png)
 
+## Funcionamiento
+### 1. Clonar el repositorio y levantar el escenario
+
+```
+git clone https://github.com/phernandez024/MPRO-CDN
+```
+```
+cd MPRO-CDN
+sudo vnx -f scenario.xml --create
+```
+### 2. Instalar ATS en la imagen VNX
+
+- Parar los escenarios VNX.
+- Arrancar la imagen en modo directo con:
+
+```
+vnx --modify-rootfs /usr/share/vnx/filesystems/vnx_rootfs_lxc_ubuntu64-20.04-v025-vnxlab/
+```
+
+- Instalamos ATS
+  
+```
+sudo apt update
+sudo apt install trafficserver
+halt -p
+```
+
 ### Profesor: Carlos M. Lentisco Sánchez
 
