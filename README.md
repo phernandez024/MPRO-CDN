@@ -43,7 +43,7 @@ nano remap.config
 map http://200.200.200.2/ http://10.6.0.2/
 ```
 
-  - En M4:
+  - En M4:  
 
 ```
 cd /etc/trafficserver
