@@ -161,7 +161,7 @@
     <filetree seq="on_boot" root="/etc/hosts" perms="755">conf/hosts</filetree>
     <exec seq="on_boot" type="verbatim">
         echo "nameserver 8.8.8.8" >> /etc/resolv.conf
-        ip route add 0.0.0.0/0 via 192.186.2.1
+        ip route add 0.0.0.0/0 via 192.168.2.1
     </exec>
   </vm>
 
@@ -172,9 +172,11 @@
     </if>
     <route type="ipv4" gw="10.6.0.1">default</route>
     <filetree seq="on_boot" root="/etc/hosts" perms="755">conf/hosts</filetree>
+    <filetree seq="on_boot" root="/var/www/html" perms="755">conf/imagenes/imagen.jpg</filetree>
     <exec seq="on_boot" type="verbatim">
         echo "nameserver 8.8.8.8" >> /etc/resolv.conf
         ip route add 0.0.0.0/0 via 10.6.0.1
+        sudo chmod 666 /var/www/html/imagen.jpg
     </exec>
   </vm>
 
@@ -185,9 +187,11 @@
     </if>
     <route type="ipv4" gw="10.7.0.1">default</route>
     <filetree seq="on_boot" root="/etc/hosts" perms="755">conf/hosts</filetree>
+    <filetree seq="on_boot" root="/var/www/html" perms="755">conf/imagenes/imagen2.jpg</filetree>
     <exec seq="on_boot" type="verbatim">
         echo "nameserver 8.8.8.8" >> /etc/resolv.conf
         ip route add 0.0.0.0/0 via 10.7.0.1
+        sudo chmod 666 /var/www/html/imagen2.jpg
     </exec>
   </vm>
 
