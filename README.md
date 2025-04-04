@@ -57,7 +57,7 @@ map http://200.200.200.2/ http://10.7.0.2/
 
 ### 3. Lanzamos petición para obtener el contenido 
 
-- Desde alguno de los PCs ejecutamos el siguiente comando para solicitar el contenido deseado de el Servidor Origen. Pero ya que queremos que ATS haga mapeo de las peticiones hacia los servidores espejo (M1 y M2), es necesario simular un proxy que redirija el tráfico hacia los servidores que contienen ATS (M3 y M4).
+- Desde alguno de los PCs ejecutamos el siguiente comando para solicitar el contenido deseado en el Servidor Origen. Pero ya que queremos que ATS haga mapeo de las peticiones hacia los servidores espejo (M1 y M2), es necesario simular un proxy que redirija el tráfico hacia los servidores que contienen ATS (M3 y M4).
 
 ```
 wget --proxy=on --execute="http_proxy=http://10.5.0.2" http://200.200.200.2/imagen.jpg
